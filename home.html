@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header,footer {
+            height: 100px;
+            background-color: #615d5d;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            flex-grow: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.35);
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #333;
+        }
+        h1{
+            font-size: 50px;
+            font-size-adjust: 0.58;
+            color: aliceblue;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #cced68;
+            color: rgb(75, 51, 51);
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1ece8d; 
+            color: white;
+          }
+
+    </style>
+    <title>Page</title>
+</head>
+<body>
+    <header>
+        <h3>Header</h3>
+    </header>
+
+    <main>
+        <img src="background_image.jpg" alt="Background Image">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>TRAVELOPIA</h1>
+            <button onclick="showAlert()">Click here</button>
+        </div>
+    </main>
+
+    <footer>
+        <h3>Footer</h3>
+    </footer>
+
+    <script>
+        function showAlert() {
+            alert("Hello, World!");
+        }
+    </script>
+</body>
+</html>
